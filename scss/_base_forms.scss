@@ -72,8 +72,8 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
     float: left;
     height: map-get($line-heights, default-text);
     margin-bottom: 0;
-    margin-right: $sph-inter--expanded;
-    margin-top: 0;
+    margin-right: $sph-inter;
+    margin-top: $spv-nudge;
     padding: 0;
     vertical-align: middle;
     width: auto;
@@ -176,10 +176,6 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
     }
   }
 
-  [type='radio'] {
-    margin-top: $spv-nudge;
-  }
-
   [type='submit'] {
     @extend %vf-button-base;
 
@@ -258,8 +254,6 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
       @include vf-focus;
 
       $label-offset--left: $sph-intra + $box-size;
-      margin-bottom: $spv-inter--condensed-scaleable;
-      margin-top: - map-get($nudges, nudge--p);
       padding-left: $label-offset--left;
       position: relative;
 
@@ -270,7 +264,7 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
         content: "";
         display: inline-block;
         height: 1rem;
-        left: 0;
+        left: 4px;
         top: $box-offset-top;
         width: 1rem;
       }
@@ -282,7 +276,7 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
         content: none;
         display: inline-block;
         height: 7px;
-        left: 2px;
+        left: 6px;
         top: 12px;
         transform: rotate(-45deg);
         width: 11px;
