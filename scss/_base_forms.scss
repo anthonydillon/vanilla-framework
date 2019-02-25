@@ -16,7 +16,12 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
     @extend %bordered-text-vertical-padding;
     @include vf-focus;
 
+    // sass-lint:disable no-vendor-prefixes property-sort-order
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
     appearance: textfield;
+    // sass-lint:enable no-vendor-prefixes property-sort-order
+
     background-color: $color-x-light;
     border: 1px solid $color-mid-light;
     border-radius: $border-radius;
@@ -44,6 +49,9 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
       outline: none;
     }
 
+    &::-webkit-placeholder,
+    &::-ms-placeholder,
+    &:-ms-placeholder,
     &::placeholder {
       color: $color-mid-dark;
       opacity: 1;
@@ -243,7 +251,11 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
 
   label {
     @extend %default-text;
+    // sass-lint:disable no-duplicate-properties
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    // sass-lint:disable no-vendor-prefixes
   }
 
   // Accessible checkbox technique from https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3
@@ -277,6 +289,7 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
 
       // tick
       &::after {
+        // sass-lint:disable property-sort-order
         border-bottom: 2px solid;
         border-left: 2px solid;
         content: none;
@@ -284,8 +297,10 @@ $input-margin-bottom: $spv-inter--scaleable - $spv-nudge * 2;
         height: 7px;
         left: 2px;
         top: 12px;
+        -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         width: 11px;
+        // sass-lint:enable property-sort-order
       }
 
       &::before,

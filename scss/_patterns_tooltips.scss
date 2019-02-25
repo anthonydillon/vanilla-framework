@@ -5,6 +5,7 @@
     position: relative;
 
     &__message {
+      // sass-lint:disable no-vendor-prefixes property-sort-order
       @extend %small-text;
       background-color: $color-dark;
       border: 0;
@@ -19,7 +20,9 @@
       text-align: left;
       text-decoration: initial;
       top: 100%;
+      -webkit-transform: translateX(0%) translateY(13px);
       transform: translateX(0%) translateY(13px);
+      // sass-lint:enable no-vendor-prefixes property-sort-order
       white-space: pre;
       z-index: 1;
 
@@ -52,14 +55,20 @@
     &--btm-center {
 
       .p-tooltip__message {
+        // sass-lint:disable no-vendor-prefixes property-sort-order
         bottom: inherit;
         left: 50%;
         top: 100%;
+        -webkit-transform: translateX(-50%) translateY(13px);
         transform: translateX(-50%) translateY(13px);
+        // sass-lint:enable no-vendor-prefixes property-sort-order
 
         &::before {
+          // sass-lint:disable no-vendor-prefixes property-sort-order
           left: 50%;
+          -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+          // sass-lint:enable no-vendor-prefixes property-sort-order
         }
       }
     }
@@ -68,11 +77,14 @@
     &--btm-right {
 
       .p-tooltip__message {
+        // sass-lint:disable no-vendor-prefixes property-sort-order
         bottom: inherit;
         left: initial;
         right: 0;
         top: 100%;
+        -webkit-transform: translateY(13px);
         transform: translateY(13px);
+        // sass-lint:enable no-vendor-prefixes property-sort-order
 
         &::before {
           left: initial;
@@ -85,10 +97,13 @@
     &--top-left {
 
       .p-tooltip__message {
+        // sass-lint:disable no-vendor-prefixes property-sort-order
         bottom: 100%;
         left: 0;
         top: initial;
+        -webkit-transform: translateX(0%) translateY(-13px);
         transform: translateX(0%) translateY(-13px);
+        // sass-lint:enable no-vendor-prefixes property-sort-order
 
         &::before {
           border: {
@@ -107,10 +122,12 @@
     &--top-center {
 
       .p-tooltip__message {
+        // sass-lint:disable no-vendor-prefixes property-sort-order
         bottom: 100%;
         left: 50%;
         top: initial;
         transform: translateX(-50%) translateY(-13px);
+        -webkit-transform: translateX(-50%) translateY(-13px);
 
         &::before {
           border: {
@@ -121,8 +138,10 @@
           }
           bottom: -1rem;
           left: 50%;
+          -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
         }
+        // sass-lint:enable no-vendor-prefixes property-sort-order
       }
     }
 
@@ -130,11 +149,14 @@
     &--top-right {
 
       .p-tooltip__message {
+        // sass-lint:disable no-vendor-prefixes property-sort-order
         bottom: 100%;
         left: initial;
         right: 0;
         top: initial;
+        -webkit-transform: translateX(0%) translateY(-13px);
         transform: translateX(0%) translateY(-13px);
+        // sass-lint:enabled no-vendor-prefixes property-sort-order
 
         &::before {
           border: {
@@ -157,9 +179,13 @@
         bottom: inherit;
         left: 100%;
         top: 50%;
+        // sass-lint:disable no-vendor-prefixes property-sort-order
+        -webkit-transform: translateX(14px) translateY(-50%);
         transform: translateX(14px) translateY(-50%);
+        // sass-lint:enable no-vendor-prefixes property-sort-order
 
         &::before {
+          // sass-lint:disable no-vendor-prefixes property-sort-order
           border: {
             bottom: 8px solid transparent;
             left: 8px solid transparent;
@@ -169,7 +195,9 @@
           bottom: inherit;
           left: 0;
           top: 50%;
+          -webkit-transform: translateX(-16px) translateY(-50%);
           transform: translateX(-16px) translateY(-50%);
+          // sass-lint:enable no-vendor-prefixes property-sort-order
         }
       }
     }
@@ -178,12 +206,16 @@
     &--left {
 
       .p-tooltip__message {
+        // sass-lint:disable no-vendor-prefixes property-sort-order
         bottom: inherit;
         left: -16px;
         top: 50%;
+        -webkit-transform: translateX(-100%) translateY(-50%);
         transform: translateX(-100%) translateY(-50%);
+        // sass-lint:enable no-vendor-prefixes property-sort-order
 
         &::before {
+          // sass-lint:disable no-vendor-prefixes property-sort-order
           border: {
             bottom: 8px solid transparent;
             left: 8px solid $color-dark;
@@ -193,7 +225,9 @@
           bottom: inherit;
           left: 100%;
           top: 50%;
+          -webkit-transform: translateX(0) translateY(-50%);
           transform: translateX(0) translateY(-50%);
+          // sass-lint:enable no-vendor-prefixes property-sort-order
         }
       }
     }

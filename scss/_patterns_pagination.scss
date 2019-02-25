@@ -45,8 +45,11 @@
 
         &::before {
           @extend %chevron-icon;
+          // sass-lint:disable no-vendor-prefixes property-sort-order
           left: $sp-small;
+          -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
+          // sass-lint:enable no-vendor-prefixes property-sort-order
         }
       }
 
